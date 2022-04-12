@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    x:Class="APLUS.TabPageProj"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:APLUS"  Visual="Material">
+    <NavigationPage.TitleView>
+        <StackLayout Margin="0,0,30,0" Orientation="Horizontal">
+            <Label
+                FontSize="20"
+                HorizontalOptions="CenterAndExpand"
+                Text="{x:Static local:TabPageProj.NameTit}"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
+            <Label
+                FontFamily="MaterialIconsFont"
+                FontSize="Title"
+                HorizontalOptions="End"
+                Text="&#xe3c9;"
+                TextColor="White">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage Title="О проекте" BackgroundColor="White">
+        <ScrollView>
+            <StackLayout>
+                <Label
+                    Margin="20"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    Text="ОПИСАНИЕ:"
+                    TextColor="Black" />
+                <Label x:Name="descrip"
+                    Margin="2"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center" 
+                    TextColor="Black" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage Title="Картинки" BackgroundColor="White">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Image
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="12"
+                Source="home.png" />
+            <Image
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="12"
+                Source="home.png" />
+            <Image
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="12"
+                Source="home.png" />
+            <Image
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="12"
+                Source="home.png" />
+            <Image
+                Grid.Row="2"
+                Grid.Column="0"
+                Margin="12"
+                Source="home.png" />
+            <Image
+                Grid.Row="2"
+                Grid.Column="1"
+                Margin="12"
+                Source="home.png" />
+            <Image
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="12"
+                Source="home.png" />
+            <Image
+                Grid.Row="3"
+                Grid.Column="1"
+                Margin="12"
+                Source="home.png" />
+        </Grid>
+    </ContentPage>
+    <ContentPage Title="Контакты" BackgroundColor="White">
+        <StackLayout>
+            <Entry x:Name="phone" TextColor="Black" IsEnabled="False" BackgroundColor="#E8E8E8" Margin="40, 30" PlaceholderColor="Black" Placeholder="Телефон №1" FontSize="15"/>
+            <Entry x:Name="email" TextColor="Black" IsEnabled="False" BackgroundColor="#E8E8E8" Margin="40, 0" PlaceholderColor="Black" Placeholder="E-mail" FontSize="15"/>
+            <Entry x:Name="adres" TextColor="Black" IsEnabled="False" BackgroundColor="#E8E8E8" Margin="40, 30" PlaceholderColor="Black" Placeholder="Адрес" FontSize="15"/>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>
